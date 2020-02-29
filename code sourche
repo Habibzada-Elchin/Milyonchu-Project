@@ -1,0 +1,2021 @@
+#include <iostream>
+#include "windows.h"
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+	char input;
+	bool check = true;
+	int sual = 1, dosta_zeng = 0, komek_50x50 = 0, zal_komek = 0, count = 0, restart = 0, bank = 0;
+	do {
+		if (sual == 1)
+		{
+			cout << "\t Kim Milyonchu olmaq ister oyununa\n\t\t Xosh gelmishsiniz!\n\n";
+			cout << "\tBashlamaq ucun ENTER duymesini basin:\n";
+			_getch();
+			cout << "\n Oyunun qaydalari haqqinda melumatiniz varmi?\n\n"
+				<< "\tBeli: [Y]\t\tXeyir: [N]\n\n\n";
+			cout << " Sechim edin: "; cin >> input;
+			system("cls");
+		}
+		if (input == 'N' || input == 'n')
+		{
+			cout << "Oyun qaydalari ile tanish olun:\n";
+			cout << "* Oyun zamani qarshiniza 4 sechim variantindan ibaret suallar chixacaq. Hemin sual ile birge komekler sechme shansiniz da olacaq. \n";
+			cout << "* Suali cavablandirdiqda derhal dogru varianti seche biler ve ya komekden istifade ede bilersiniz : 50 / 50, dosta zeng, auditoriyanin komeyi.\n";
+			cout << "* Bir sual uchun ancaq bir komekden istifade etmek olar. Oyun erzinde eyni  varianti tekrar sechmek olmaz.\n";
+			cout << "* Cavab sechildikden sonra bu cavabin dogrulugu barede melumat cixir ve novbeti sual meydana chixir.\n";
+			cout << "* Oyun erzinde umumi 10 sual olacaq. her suala gore mueyyen mebleg qazanilacaq ve sonra 1000000 AZN qazanma shansiniz olacaq.\n";
+			cout << "* Her bir duzgun cavablandirilan suala gore balansa pul elave edilir.\n";
+			cout << "* Oyun bitdikde ekrana qazandiginiz balans chixacaq.\n\n";
+			cout << "\tOyunda Ugurlar ve bol qazanclar!!!\n\n";
+			cout << "Suallara start vermek ucun ENTER duymesini sixin\n";
+			_getch();
+			system("cls");
+		}
+		if (sual == 1) cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+			<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000 <--\n\n";
+		if (dosta_zeng == 0) cout << "\t[Dosta zeng]: 1";
+		if (komek_50x50 == 0) cout << "\t\t[50x50]: 2";
+		if (zal_komek == 0) cout << "\t\t[Aditoriyanin komeyi]: 3";
+		if (input == 'Y' || input == 'y' && sual == 1)
+		{
+			cout << "\n\n\n 1) Azerbaycan olkesinin paytaxti hansi sherdir?\n\n\t";
+			cout << "[ A ]: Baki \t\t[ B:] Gence \t\t[ C: ] Shamaxi \t\t[ D: ] Naxchivan \n\n";
+			cout << " Sechim edin: "; cin >> input;
+			while (check != false)
+			{
+				if (input == '1' && dosta_zeng == 0)
+				{
+					count = 0;
+					dosta_zeng = 1;
+					while (count < 10)
+					{
+						cout << "\n Zeng edilir.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n Mence cavab A variantidir...\n\n\n";
+					cout << "\tCavablandirma ucun ENTER duymesini basin:\n";
+					_getch();
+					system("cls");
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000 <--\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n 1) Azerbaycan olkesinin paytaxti hansi sherdir?\n\n\t";
+					cout << "[ A ]: Baki \t\t[ B:] Gence \t\t[ C: ] Shamaxi \t\t[ D: ] Naxchivan \n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '2' && komek_50x50 == 0)
+				{
+					count = 0;
+					system("cls");
+					komek_50x50 = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000 <--\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n 1) Azerbaycan olkesinin paytaxti hansi sherdir?\n\n\t";
+					cout << "[ A ]: Baki \t\t[ B:\t]  \t\t[ C: ] Shamaxi \t\t[ D: \t]   \n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '3' && zal_komek == 0)
+				{
+					count = 0;
+					system("cls");
+					zal_komek = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000 <--\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n [ A: ] 95 % \t\t[ B: ]52 % \t\t[ C: ] 4 % \t\t[ D: ]12 % \n\n";
+					cout << "\n\n\n 1) 1) Azerbaycan olkesinin paytaxti hansi sherdir?\n\n\t";
+					cout << "[ A ]: Baki \t\t[ B:] Gence \t\t[ C: ] Shamaxi \t\t[ D: ] Naxchivan \n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '4') cout << "\n\n 1-ci merheleden oyunu terk etmek mumkun deyil...\n\n";
+				if (input == '1' || input == '2' || input == '3')
+				{
+					cout << "\n\n Siz artiq bu komekden istifade etmisiniz...\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				else
+					check = false;
+			}
+			if (input == 'A' || input == 'a')
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 09");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				sual++;
+				bank = 1000;
+			}
+			else
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 00");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				restart = 1;
+			}
+		}
+		if (sual == 2)
+		{
+			system("cls");
+			cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+				<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500 <--\n 1) - 1000\n\n";
+			(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+			(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+			(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+			cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+			cout << "\n\n\n 2) Bu yaglardan hansi sudden hazirlanir?\n\n\t";
+			cout << "[ A: ] elif \t\t[ B: ] cehre yagi\t\t[ C: ] kere yagi\t\t[ D: ] qargidali yagi\n\n";
+			cout << "\n\n Sechim edin: "; cin >> input;
+			check = true;
+			while (check != false)
+			{
+				if (input == '1' && dosta_zeng == 0)
+				{
+					count = 0;
+					system("cls");
+					dosta_zeng = 1;
+					while (count < 10)
+					{
+						cout << "\n Zeng edilir.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\tCavablandirma ucun ENTER duymesini basin:\n";
+					_getch();
+					system("cls");
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500 <--\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 2) Bu yaglardan hansi sudden hazirlanir?\n\n\t";
+					cout << "[ A: ] elif \t\t[ B: ] cehre yagi\t\t[ C: ] kere yagi\t\t[ D: ] qargidali yagi\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '2' && komek_50x50 == 0)
+				{
+					count = 0;
+					system("cls");
+					komek_50x50 = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500 <--\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 2) Bu yaglardan hansi sudden hazirlanir?\n\n\t";
+					cout << "[\t]\t\t[ A: ] elif yagi\t\t[ C: ]kere yagi \t\t[\t]\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '3' && zal_komek == 0)
+				{
+					count = 0;
+					system("cls");
+					zal_komek = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500 <--\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n [ A: 11 % ]\t\t[ B: 43 % ]\t\t[ C: 93 % ]\t\t[ D: 19 % ]\n\n";
+					cout << "\n\n\n 2) Bu yaglardan hansi sudden hazirlanir?\n\n\t";
+					cout << "[ A: ] elif \t\t[ B: ] cehre yagi\t\t[ C: ] kere yagi\t\t[ D: ] qargidali yagi\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '1' || input == '2' || input == '3')
+				{
+					cout << "\n\n Siz artiq bu komekden istifade etmisiniz...\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				else
+					check = false;
+			}
+			if (input == '4')
+			{
+				system("cls");
+				cout << "\n\n Oynda ishtirak etdiyiniz uchun size derin minnetdarligimizi bildiririk...\n\n\t"
+					<< "Qazandiginiz pulun umumi meblegi: " << bank << " AZN teshkil edir...\n\n";
+				return 0;
+			}
+			if (input == 'C' || input == 'c')
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 09");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				sual++;
+				bank += 2500;
+			}
+			else
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 00");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				restart = 1;
+			}
+		}
+		if (sual == 3)
+		{
+			system("cls");
+			cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+				<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000 <--\n 2) - 2500\n 1) - 1000\n\n";
+			(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+			(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+			(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+			cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+			cout << "\n\n\n 3) Bu letife qehramanlarindan hansi Shekilidir?\n\n\t";
+			cout << "[ A: ] Molla Nesreddin \t\t[ B: ] Haci dayi \t\t[ C: ] Capayev\t\t[ D: ] Behlul\n\n";
+			cout << "\n\n Sechim edin: "; cin >> input;
+			check = true;
+			while (check != false)
+			{
+				if (input == '1' && dosta_zeng == 0)
+				{
+					count = 0;
+					system("cls");
+					dosta_zeng = 1;
+					while (count < 10)
+					{
+						cout << "\n Zeng edilir.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n Mence cavab B variantidir...\n\n\n";
+					cout << "\tCavablandirma ucun ENTER duymesini basin:\n";
+					_getch();;
+					system("cls");
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000 <--\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 3) Bu letife qehramanlarindan hansi Shekilidir?\n\n\t";
+					cout << "[ A: ] Molla Nesreddin \t\t[ B: ] Haci dayi \t\t[ C: ] Capayev\t\t[ D: ] Behlul\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '2' && komek_50x50 == 0)
+				{
+					count = 0;
+					system("cls");
+					komek_50x50 = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000 <--\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 3) Bu letife qehramanlarindan hansi Shekilidir?\n\n\t";
+					cout << "[ A:\t]\t\t[ B: ] Haci dayi \t\t[ C: ] Capayev\t\t[ D:\t]\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '3' && zal_komek == 0)
+				{
+					count = 0;
+					system("cls");
+					zal_komek = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000 <--\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n [ A: 2 % ]\t\t[ B: 62 % ]\t\t[ C: 14 % ]\t\t[ D: 22 % ]\n\n";
+					cout << "\n\n\n 3) Bu letife qehramanlarindan hansi Shekilidir?\n\n\t";
+					cout << "[ A: ] Molla Nesreddin \t\t[ B: ] Haci dayi \t\t[ C: ] Capayev\t\t[ D: ] Behlul\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '1' || input == '2' || input == '3')
+				{
+					cout << "\n\n Siz artiq bu komekden istifade etmisiniz...\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				else
+					check = false;
+			}
+			if (input == '4')
+			{
+				system("cls");
+				cout << "\n\n Oynda ishtirak etdiyiniz uchun size derin minnetdarligimizi bildiririk...\n\n\t"
+					<< "Qazandiginiz pulun umumi meblegi: " << bank << " AZN teshkil edir...\n\n";
+				return 0;
+			}
+			if (input == 'B' || input == 'b')
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 09");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				sual++;
+				bank += 5000;
+			}
+			else
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 00");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				restart = 1;
+			}
+		}
+		if (sual == 4)
+		{
+			system("cls");
+			cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+				<< "\n 5) - 25.000\n 4) - 10.000 <--\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+			(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+			(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+			(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+			cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+			cout << "\n\n\n 4) Isvechrenin bu mehsulu dunya sohreti qazanib?\n\n\t";
+			cout << "[ A: ] mashin \t\t[ B: ] cetir \t\t[ C: ] etir\t\t[ D: ] saat\n\n";
+			cout << "\n\n Sechim edin: "; cin >> input;
+			check = true;
+			while (check != false)
+			{
+				if (input == '1' && dosta_zeng == 0)
+				{
+					count = 0;
+					system("cls");
+					dosta_zeng = 1;
+					while (count < 10)
+					{
+						cout << "\n Zeng edilir.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n Mence cavab D variantidir...\n\n\n";
+					cout << "\tCavablandirma ucun ENTER duymesini basin:\n";
+					_getch();
+					system("cls");
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000 <--\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 4) Isvechrenin bu mehsulu dunya sohreti qazanib?\n\n\t";
+					cout << "[ A: ] mashin \t\t[ B: ] cetir \t\t[ C: ] etir\t\t[ D: ] saat\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '2' && komek_50x50 == 0)
+				{
+					count = 0;
+					system("cls");
+					komek_50x50 = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000 <--\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 4) Isvechrenin bu mehsulu dunya sohreti qazanib?\n\n\t";
+					cout << "[ A:\t]\t\t[ B: ] cetir \t\t[ C:\t]\t\t[ D: ] saat \n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '3' && zal_komek == 0)
+				{
+					count = 0;
+					system("cls");
+					zal_komek = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000 <--\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n [ A: ] 4 % \t\t[ B: ] 6 % \t\t[ C: ] 15 % \t\t[ D: ] 75 % \n\n";
+					cout << "\n\n\n 4) Isvechrenin bu mehsulu dunya sohreti qazanib?\n\n\t";
+					cout << "[ A: ] mashin \t\t[ B: ] cetir \t\t[ C: ] etir\t\t[ D: ] saat\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '1' || input == '2' || input == '3')
+				{
+					cout << "\n\n Siz artiq bu komekden istifade etmisiniz...\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				else
+					check = false;
+			}
+			if (input == '4')
+			{
+				system("cls");
+				cout << "\n\n Oynda ishtirak etdiyiniz uchun size derin minnetdarligimizi bildiririk...\n\n\t"
+					<< "Qazandiginiz pulun umumi meblegi: " << bank << " AZN teshkil edir...\n\n";
+				return 0;
+			}
+			if (input == 'D' || input == 'd')
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 09");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				sual++;
+				bank += 10000;
+			}
+			else
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 00");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				restart = 1;
+			}
+		}
+		if (sual == 5)
+		{
+			system("cls");
+			cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+				<< "\n 5) - 25.000 <--\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+			(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+			(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+			(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+			cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+			cout << "\n\n\n 5) Bu tropik meyvelerden hansi sudludur?\n\n\t";
+			cout << "[ A: ] kakos \t\t[ B: ] banan\t\t[ C: ] kivi \t\t[ D: ] ananas \n\n";
+			cout << "\n\n Sechim edin: "; cin >> input;
+			check = true;
+			while (check != false)
+			{
+				if (input == '1' && dosta_zeng == 0)
+				{
+					count = 0;
+					system("cls");
+					dosta_zeng = 1;
+					while (count < 10)
+					{
+						cout << "\n Zeng edilir.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n Mence cavab A variantidir...\n\n\n";
+					cout << "\tCavablandirma ucun ENTER duymesini basin:\n";
+					_getch();
+					system("cls");
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000 <--\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 5) Bu tropik meyvelerden hansi sudludur?\n\n\t";
+					cout << "[ A: ] kakos \t\t[ B: ] banan\t\t[ C: ] kivi \t\t[ D: ] ananas \n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '2' && komek_50x50 == 0)
+				{
+					count = 0;
+					system("cls");
+					komek_50x50 = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000 <--\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 5) Bu tropik meyvelerden hansi sudludur?\n\n\t";
+					cout << "[ A: ] kakos \t\t[ B:\t]\t\t[ C: ] kivi \t\t[ D:\t]\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '3' && zal_komek == 0)
+				{
+					count = 0;
+					system("cls");
+					zal_komek = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000 <--\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n [ A: 86 % ]\t\t[ B: 4 % ]\t\t[ C: 7 % ]\t\t[ D: 3 % ]\n\n";
+					cout << "\n\n\n 5) Bu tropik meyvelerden hansi sudludur?\n\n\t";
+					cout << "[ A: ] kakos \t\t[ B: ] banan\t\t[ C: ] kivi \t\t[ D: ] ananas \n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '1' || input == '2' || input == '3')
+				{
+					cout << "\n\n Siz artiq bu komekden istifade etmisiniz...\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				else
+					check = false;
+			}
+			if (input == '4')
+			{
+				system("cls");
+				cout << "\n\n Oynda ishtirak etdiyiniz uchun size derin minnetdarligimizi bildiririk...\n\n\t"
+					<< "Qazandiginiz pulun umumi meblegi: " << bank << " AZN teshkil edir...\n\n";
+				return 0;
+			}
+			if (input == 'A' || input == 'a')
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 09");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				sual++;
+				bank += 25000;
+			}
+			else
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 00");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				restart = 1;
+			}
+		}
+		if (sual == 6)
+		{
+			system("cls");
+			cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000 <--"
+				<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+			(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+			(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+			(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+			cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+			cout << "\n\n\n 6) C.Cabbarlinin qeyremani Oktay Eloglunun pesesi ne idi?\n\n\t";
+			cout << "[ A: ] Aktyor \t\t[ B: ] Muellim \t\t[ C: ] Hekim \t\t[ D: ] Ressam\n\n";
+			cout << "\n\n Sechim edin: "; cin >> input;
+			check = true;
+			while (check != false)
+			{
+				if (input == '1' && dosta_zeng == 0)
+				{
+					count = 0;
+					system("cls");
+					dosta_zeng = 1;
+					while (count < 10)
+					{
+						cout << "\n Zeng edilir.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n Mence cavab A variantidir...\n\n\n";
+					cout << "\tCavablandirma ucun ENTER duymesini basin:\n";
+					_getch();
+					system("cls");
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000 <--"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 6) C.Cabbarlinin qeyremani Oktay Eloglunun pesesi ne idi?\n\n\t";
+					cout << "[ A: ] Aktyor \t\t[ B: ] Muellim \t\t[ C: ] Hekim \t\t[ D: ] Ressam\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '2' && komek_50x50 == 0)
+				{
+					count = 0;
+					system("cls");
+					komek_50x50 = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000 <--"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 6) C.Cabbarlinin qeyremani Oktay Eloglunun pesesi ne idi?\n\n\t";
+					cout << "[ A: ] Aktyor \t\t[ B: ] Muellim \t\t[ C:\t]\t\t[ D:\t]\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '3' && zal_komek == 0)
+				{
+					count = 0;
+					system("cls");
+					zal_komek = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000 <--"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n [ A: 69 % ]\t\t[ B: 21 % ]\t\t[ C: 4 % ]\t\t[ D: 6 % ]\n\n";
+					cout << "\n\n\n 6) C.Cabbarlinin qeyremani Oktay Eloglunun pesesi ne idi?\n\n\t";
+					cout << "[ A: ] Aktyor \t\t[ B: ] Muellim \t\t[ C: ] Hekim \t\t[ D: ] Ressam\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '1' || input == '2' || input == '3')
+				{
+					cout << "\n\n Siz artiq bu komekden istifade etmisiniz...\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				else
+					check = false;
+			}
+			if (input == '4')
+			{
+				system("cls");
+				cout << "\n\n Oynda ishtirak etdiyiniz uchun size derin minnetdarligimizi bildiririk...\n\n\t"
+					<< "Qazandiginiz pulun umumi meblegi: " << bank << " AZN teshkil edir...\n\n";
+				return 0;
+			}
+			if (input == 'A' || input == 'a')
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 09");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				sual++;
+				bank += 40000;
+			}
+			else
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 00");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				restart = 1;
+			}
+		}
+		if (sual == 7)
+		{
+			system("cls");
+			cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000 <--\n 6) - 40.000"
+				<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+			(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+			(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+			(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+			cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+			cout << "\n\n\n 7) Bu heyvanlardan hansi itin ecdadi hesab olunur?\n\n\t";
+			cout << "[ A: ] canavar \t\t[ B: ] tulku \t\t[ C: ] bebir \t\t[ D: ] caqqal \n\n";
+			cout << "\n\n Sechim edin: "; cin >> input;
+			check = true;
+			while (check != false)
+			{
+				if (input == '1' && dosta_zeng == 0)
+				{
+					count = 0;
+					system("cls");
+					dosta_zeng = 1;
+					while (count < 10)
+					{
+						cout << "\n Zeng edilir.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n Mence cavab A variantidir...\n\n\n";
+					cout << "\tCavablandirma ucun ENTER duymesini basin:\n";
+					_getch();
+					system("cls");
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000 <--\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 7) Bu heyvanlardan hansi itin ecdadi hesab olunur?\n\n\t";
+					cout << "[ A: ] canavar \t\t[ B: ] tulku \t\t[ C: ] bebir \t\t[ D: ] caqqal \n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '2' && komek_50x50 == 0)
+				{
+					count = 0;
+					system("cls");
+					komek_50x50 = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000 <--\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 7) Bu heyvanlardan hansi itin ecdadi hesab olunur?\n\n\t";
+					cout << "[ A: ] canavar \t\t[ B:\t]\t\t[ C:\t]\t\t[ D: ] bebir \n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '3' && zal_komek == 0)
+				{
+					count = 0;
+					system("cls");
+					zal_komek = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000 <--\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n [ A: 64 % ]\t\t[ B: 21 % ]\t\t[ C: 10 % ]\t\t[ D: 5 % ]\n\n";
+					cout << "\n\n\n 7) Bu heyvanlardan hansi itin ecdadi hesab olunur?\n\n\t";
+					cout << "[ A: ] canavar \t\t[ B: ] tulku \t\t[ C: ] bebir \t\t[ D: ] caqqal \n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '1' || input == '2' || input == '3')
+				{
+					cout << "\n\n Siz artiq bu komekden istifade etmisiniz...\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				else
+					check = false;
+			}
+			if (input == '4')
+			{
+				system("cls");
+				cout << "\n\n Oyunda ishtirak etdiyiniz uchun size derin minnetdarligimizi bildiririk...\n\n\t"
+					<< "Qazandiginiz pulun umumi meblegi: " << bank << " AZN teshkil edir...\n\n";
+				return 0;
+			}
+			if (input == 'A' || input == 'a')
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 09");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				sual++;
+				bank += 50000;
+			}
+			else
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 00");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				restart = 1;
+			}
+		}
+		if (sual == 8)
+		{
+			system("cls");
+			cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000 <--\n 7) - 50.000\n 6) - 40.000"
+				<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+			(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+			(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+			(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+			cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+			cout << "\n\n\n 8) Tac Mahal sarayi hansi seherdedir?\n\n\t";
+			cout << "[ A: ] Bombeyde \t\t[ B: ] Aqrada \t\t[ C: ] Dehlide \t\t[ D: ] USA de \n\n";
+			cout << "\n\n Sechim edin: "; cin >> input;
+			check = true;
+			while (check != false)
+			{
+				if (input == '1' && dosta_zeng == 0)
+				{
+					count = 0;
+					system("cls");
+					dosta_zeng = 1;
+					while (count < 10)
+					{
+						cout << "\n Zeng edilir.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n Mence cavab B variantidir...\n\n\n";
+					cout << "\tCavablandirma ucun ENTER duymesini basin:\n";
+					_getch();
+					system("cls");
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000 <--\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 8) Tac Mahal sarayi hansi seherdedir?\n\n\t";
+					cout << "[ A: ] Bombeyde \t\t[ B: ] Aqrada \t\t[ C: ] Dehlide \t\t[ D: ] USA de \n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '2' && komek_50x50 == 0)
+				{
+					count = 0;
+					system("cls");
+					komek_50x50 = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000 <--\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 8) Tac Mahal sarayi hansi seherdedir?\n\n\t";
+					cout << "[ A:\t]\t\t[ B: ] Aqrada \t\t[ C:\t]\t\t[ D: ] USA de\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '3' && zal_komek == 0)
+				{
+					count = 0;
+					system("cls");
+					zal_komek = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000\n 8) - 60.000 <--\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n [ A: 13 % ]\t\t[ B: 77 % ]\t\t[ C: 3 % ]\t\t[ D: 7 % ]\n\n";
+					cout << "\n\n\n 8) Tac Mahal sarayi hansi seherdedir?\n\n\t";
+					cout << "[ A: ] Bombeyde \t\t[ B: ] Aqrada \t\t[ C: ] Dehlide \t\t[ D: ] USA de \n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '1' || input == '2' || input == '3')
+				{
+					cout << "\n\n Siz artiq bu komekden istifade etmisiniz...\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				else
+					check = false;
+			}
+			if (input == '4')
+			{
+				system("cls");
+				cout << "\n\n Oynda ishtirak etdiyiniz uchun size derin minnetdarligimizi bildiririk...\n\n\t"
+					<< "Qazandiginiz pulun umumi meblegi: " << bank << " AZN teshkil edir...\n\n";
+				return 0;
+			}
+			if (input == 'B' || input == 'b')
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 09");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				sual++;
+				bank += 60000;
+			}
+			else
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 00");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				restart = 1;
+			}
+		}
+		if (sual == 9)
+		{
+			system("cls");
+			cout << "\n 10) - 100.000\n 9) - 75.000 <--\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+				<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+			(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+			(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+			(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+			cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+			cout << "\n\n\n 9) Apple sirketinin ilk yaradicisi kim olub?\n\n\t";
+			cout << "[ A: Stiv Cobs ]\t\t[ B: Mark Zuckerberg ]\t\t[ C: Denzel Washington ]\t\t[ D: Bill Gates ]\n\n";
+			cout << "\n\n Sechim edin: "; cin >> input;
+			check = true;
+			while (check != false)
+			{
+				if (input == '1' && dosta_zeng == 0)
+				{
+					count = 0;
+					system("cls");
+					while (count < 10)
+					{
+						cout << "\n Zeng edilir.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n Mence cavab A variantidir...\n\n\n";
+					cout << "\tCavablandirma ucun ENTER duymesini basin:\n";
+					_getch();
+					system("cls");
+					cout << "\n 10) - 100.000\n 9) - 75.000 <--\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 9) Apple sirketinin ilk yaradicisi kim olub?\n\n\t";
+					cout << "[ A: Stiv Cobs ]\t\t[ B: Mark Zuckerberg ]\t\t[ C: Denzel Washington ]\t\t[ D: Bill Gates ]\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '2' && komek_50x50 == 0)
+				{
+					count = 0;
+					system("cls");
+					komek_50x50 = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000 <--\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 9) Apple sirketinin ilk yaradicisi kim olub?\n\n\t";
+					cout << "[ A: Stiv Cobs ]\t\t[ B:\t]\t\t[ C:\t]\t\t[ D: Bill Gates ]\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '3' && zal_komek == 0)
+				{
+					count = 0;
+					system("cls");
+					zal_komek = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000\n 9) - 75.000 <--\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n [ A: 78 % ]\t\t[ B: 10 % ]\t\t[ C: 3 % ]\t\t[ D: 7 % ]\n\n";
+					cout << "\n\n\n 9) Facesmash.com saytinin ilk yaradicisi kim olub?\n\n\t";
+					cout << "[ A: Stiv Cobs ]\t\t[ B: Mark Zuckerberg ]\t\t[ C: Denzel Washington ]\t\t[ D: Bill Gates ]\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '1' || input == '2' || input == '3')
+				{
+					cout << "\n\n Siz artiq bu komekden istifade etmisiniz...\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				else
+					check = false;
+			}
+			if (input == '4')
+			{
+				system("cls");
+				cout << "\n\n Oynda ishtirak etdiyiniz uchun size derin minnetdarligimizi bildiririk...\n\n\t"
+					<< "Qazandiginiz pulun umumi meblegi: " << bank << " AZN teshkil edir...\n\n";
+				return 0;
+			}
+			if (input == 'A' || input == 'a')
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 09");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				sual++;
+				bank += 75000;
+			}
+			else
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 00");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				restart = 1;
+			}
+		}
+		if (sual == 10)
+		{
+			system("cls");
+			cout << "\n 10) - 100.000 <--\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+				<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+			(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+			(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+			(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+			cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+			cout << "\n\n\n 10) ABSH in hansi shtati qizil shtat leqebin dashiyir?\n\n\t";
+			cout << "[ A: ] Texas \t\t[ B: ] Arizona \t\t[ C: ] Kanzas \t\t[ D: ] Kaliforniya \n\n";
+			cout << "\n\n Sechim edin: "; cin >> input;
+			check = true;
+			while (check != false)
+			{
+				if (input == '1' && dosta_zeng == 0)
+				{
+					count = 0;
+					system("cls");
+					dosta_zeng = 1;
+					while (count < 10)
+					{
+						cout << "\n Zeng edilir.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Zeng edilir...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n Mence cavab D variantidir...\n\n\n";
+					cout << "\tCavablandirma ucun ENTER duymesini basin:\n";
+					_getch();
+					system("cls");
+					cout << "\n 10) - 100.000 <--\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 10) ABSH in hansi shtati qizil shtat leqebin dashiyir?\n\n\t";
+					cout << "[ A: ] Texas \t\t[ B: ] Arizona \t\t[ C: ] Kanzas \t\t[ D: ] Kaliforniya \n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '2' && komek_50x50 == 0)
+				{
+					count = 0;
+					system("cls");
+					komek_50x50 = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000 <--\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n\n 10) ABSH in hansi shtati qizil shtat leqebin dashiyir?\n\n\t";
+					cout << "[ A:\t]\t\t[ B: ] Arizona \t\t[ C:\t]\t\t[ D: ] Kaliforniya \n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '3' && zal_komek == 0)
+				{
+					count = 0;
+					system("cls");
+					zal_komek = 1;
+					while (count < 10)
+					{
+						cout << "\n Gozleyin.\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin..\n";
+						Sleep(1);
+						system("cls");
+						cout << "\n Gozleyin...\n";
+						Sleep(1);
+						system("cls");
+						count++;
+					}
+					cout << "\n 10) - 100.000 <--\n 9) - 75.000\n 8) - 60.000\n 7) - 50.000\n 6) - 40.000"
+						<< "\n 5) - 25.000\n 4) - 10.000\n 3) - 5000\n 2) - 2500\n 1) - 1000\n\n";
+					(dosta_zeng == 0) ? (cout << "\t[Dosta zeng]: 1") : (cout << "\t\t[X]: ");
+					(komek_50x50 == 0) ? (cout << "\t\t[50x50]: 2") : (cout << "\t\t[X]: ");
+					(zal_komek == 0) ? (cout << "\t\t[Aditoriyanin komeyi]: 3") : (cout << "\t\t[X]: ");
+					cout << "\n\n\n\t\t\t\t\t\tQazanilan pulu goturub, oyunu terk etmek: 4";
+					cout << "\n\n [ A: 5 % ]\t\t[ B: 5 % ]\t\t[ C: 2 % ]\t\t[ D: 88 % ]\n\n";
+					cout << "\n\n\n 10) ABSH in hansi shtati qizil shtat leqebin dashiyir?\n\n\t";
+					cout << "[ A: ] Texas \t\t[ B: ] Arizona \t\t[ C: ] Kanzas \t\t[ D: ] Kaliforniya \n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				if (input == '1' || input == '2' || input == '3')
+				{
+					cout << "\n\n Siz artiq bu komekden istifade etmisiniz...\n\n";
+					cout << "\n\n Sechim edin: "; cin >> input;
+				}
+				else
+					check = false;
+			}
+			if (input == '4')
+			{
+				system("cls");
+				cout << "\n\n Oynda ishtirak etdiyiniz uchun size derin minnetdarligimizi bildiririk...\n\n\t"
+					<< "Qazandiginiz pulun umumi meblegi: " << bank << " AZN teshkil edir...\n\n";
+				return 0;
+			}
+			if (input == 'D' || input == 'd')
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 09");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					system("color 0A");
+					cout << "\n   ***TEBRIKLER***\n ***CAVAB DUZGUNDUR***\n\n";
+					Sleep(100);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				sual++;
+				bank += 100000;
+			}
+			else
+			{
+				count = 0;
+				while (count < 10)
+				{
+					cout << "\n Gozleyin.\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin..\n";
+					Sleep(100);
+					system("cls");
+					cout << "\n Gozleyin...\n";
+					Sleep(100);
+					system("cls");
+					count++;
+				}
+				count = 0;
+				while (count < 10)
+				{
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 00");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					system("color 04");
+					cout << "\n   ***TEESSUFLER***\n ***CAVAB SEHVDIR***\n\n";
+					Sleep(10);
+					system("cls");
+					Sleep(1);
+					count++;
+				}
+				system("color 07");
+				restart = 1;
+			}
+		}
+		system("cls");
+		if (sual == 11)
+		{
+			count = 0;
+			while (count < 8)
+			{
+				system("color 0A");
+				cout << "\n   ***TEBRIKLER***\n ***SIZ MILYONCUSUNUZ***\n\n";
+				Sleep(100);
+				system("cls");
+				system("color 09");
+				cout << "\n   ***TEBRIKLER***\n ***SIZ MILYONCUSUNUZ***\n\n";
+				Sleep(100);
+				system("cls");
+				system("color 0A");
+				cout << "\n   ***TEBRIKLER***\n ***SIZ MILYONCUSUNUZ***\n\n";
+				Sleep(100);
+				system("cls");
+				Sleep(1);
+				count++;
+			}
+			restart = 1;
+			system("color 07");
+		}
+		while (restart == 1)
+		{
+			cout << "\n\n Yeniden oynamaq isteyirsiniz?\n\n"
+				<< "\tBeli: [Y]\t\tXeyr: [N]\n\n";
+			cout << "\n\n Sechim edin: "; cin >> input;
+			if (input == 'Y' || input == 'y')
+			{
+				sual = 1;
+				input = 0;
+				dosta_zeng = 0;
+				komek_50x50 = 0;
+				zal_komek = 0;
+				system("cls");
+				restart = 0;
+			}
+			else if (input == 'N' || input == 'n')
+				return 0;
+			else
+			{
+				cout << "\n Daxiletme sehvdir...\n\n";
+				system("pause");
+				system("cls");
+			}
+		}
+	} while (true);
+}
